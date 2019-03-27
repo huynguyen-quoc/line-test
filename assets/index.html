@@ -1,0 +1,24 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title><%= htmlWebpackPlugin.options.title || 'Line Test' %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet" async>
+</head>
+<body>
+<div id="react" class="min-height: 100vh;">
+
+</div>
+<% if (htmlWebpackPlugin.options.window) { %>
+<script>
+  <% for (var varName in htmlWebpackPlugin.options.window) { %>
+    window['<%= varName %>'] = <%= JSON.stringify(htmlWebpackPlugin.options.window[varName]) %>;
+    <% } %>
+</script>
+<% } %>
+<noscript>
+  <div style="align-items: center; display: flex; font-size: 30px; justify-content: center; min-height: 100vh;">This website need Javascript. Please turn it on.</div>
+</noscript>
+</body>
+</html>

@@ -1,13 +1,11 @@
 // Polyfills
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './antd.less';
-import './scss/styles.scss';
-
-import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
-import { store, persistor } from 'store/index';
-import App from 'containers/App/index';
+import App from 'containers/App';
+import './style.scss';
+import 'jquery/src/jquery';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 export const app = {
   cssRetries: 0,
@@ -15,23 +13,8 @@ export const app = {
 
   run() {
     this.render(App);
-
-    /* istanbul ignore else */
-    if (process.env.NODE_ENV === 'production') {
-      this.initOfflinePlugin();
-    }
   },
-  initOfflinePlugin() {
-    const OfflinePlugin = require('offline-plugin/runtime');
 
-    /* istanbul ignore next */
-    OfflinePlugin.install({
-      onUpdateReady: () => {
-        OfflinePlugin.applyUpdate();
-      },
-      onUpdated: () => {},
-    });
-  },
   render(Component) {
     const root = document.getElementById('react');
 

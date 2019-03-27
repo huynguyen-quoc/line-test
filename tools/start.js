@@ -26,7 +26,6 @@ const openBrowser = require('react-dev-utils/openBrowser');
 const {
   choosePort,
   createCompiler,
-  // prepareProxy,
   prepareUrls,
 } = require('react-dev-utils/WebpackDevServerUtils');
 
@@ -58,7 +57,7 @@ choosePort(HOST, DEFAULT_PORT)
     const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
     const appName = require(paths.packageJson).name;
     const urls = prepareUrls(protocol, HOST, port);
-    const compiler = createCompiler(webpack, config, appName, urls);
+    const compiler = createCompiler({ webpack, config, appName, urls });
 
     // Load proxy config
     const proxySetting = require(paths.packageJson).proxy;
@@ -89,7 +88,6 @@ choosePort(HOST, DEFAULT_PORT)
 
       callback();
     });
-
     const devServer = new WebpackDevServer(compiler, serverConfig);
     // Launch WebpackDevServer.
     devServer.listen(port, HOST, err => {

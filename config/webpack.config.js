@@ -5,7 +5,6 @@ const dateFns = require('date-fns');
 
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
-const GitInfoPlugin = require('git-info-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
@@ -20,11 +19,6 @@ const getClientEnvironment = require('./env');
 const paths = require('./paths');
 
 const NPMPackage = require(paths.packageJson);
-const gitInfoPlugin = new GitInfoPlugin({
-  hashCommand: 'rev-parse --short HEAD',
-});
-
-const GITHASH = gitInfoPlugin.hash() || '';
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
@@ -59,7 +53,6 @@ module.exports = webpackEnv => {
     annotation: true,
   };
   const htmlPluginOptions = {
-    githash: GITHASH,
     inject: true,
     template: paths.appHtml,
     title: NPMPackage.title,
@@ -120,17 +113,7 @@ module.exports = webpackEnv => {
       loader: 'sass',
       options: {
         sourceMap: isProd,
-      },
-    },
-  ];
-
-  const lessLoaders = [
-    ...cssLoaders,
-    {
-      loader: 'less',
-      options: {
-        sourceMap: isProd,
-        javascriptEnabled: true,
+        includePaths: [paths.nodeModules]
       },
     },
   ];
@@ -141,7 +124,6 @@ module.exports = webpackEnv => {
     mode: isProd ? 'production' : 'development',
     devtool: isProd && shouldUseSourceMap ? 'source-map' : 'eval-source-map',
     entry: {
-      'scripts/modernizr': paths.appModernizr,
       'scripts/bundle': [
         isProd && paths.appPolyfills,
         isDev && 'react-hot-loader/patch',
@@ -164,7 +146,6 @@ module.exports = webpackEnv => {
     resolve: {
       alias: {
         assets: paths.appAssets,
-        modernizr$: paths.appModernizrrc,
         test: paths.test,
         'react-dom': '@hot-loader/react-dom',
       },
@@ -201,10 +182,6 @@ module.exports = webpackEnv => {
               // Remove this when webpack adds a warning or an error for this.
               // See https://github.com/webpack/webpack/issues/6571
               sideEffects: true,
-            },
-            {
-              test: /\.less$/,
-              use: lessLoaders,
             },
             // Opt-in support for SASS (using .scss or .sass extensions).
             // By default we support SASS Modules with the
@@ -251,11 +228,6 @@ module.exports = webpackEnv => {
                   loader: 'url',
                 },
               ],
-            },
-            {
-              test: /modernizrrc\.json$/,
-              type: 'javascript/auto',
-              use: ['expose?Modernizr', 'modernizr', 'json'],
             },
             {
               test: /\.md$/,
@@ -340,13 +312,10 @@ module.exports = webpackEnv => {
     plugins: [
       new webpack.DefinePlugin({
         ...env.stringified,
-        APP__BRANCH: JSON.stringify(gitInfoPlugin.branch()),
         APP__BUILD_DATE: JSON.stringify(dateFns.format(new Date(), 'DD/MM/YYYY')),
-        APP__GITHASH: JSON.stringify(gitInfoPlugin.hash()),
         APP__VERSION: JSON.stringify(NPMPackage.version),
       }),
       new ModuleNotFoundPlugin(paths.appPath),
-      gitInfoPlugin,
       new HtmlPlugin(htmlPluginOptions),
       new InterpolateHtmlPlugin(HtmlPlugin, env.raw),
       new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
