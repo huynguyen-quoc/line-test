@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import App from 'containers/App';
 import './style.scss';
-import 'jquery/src/jquery';
+import 'jquery/dist/jquery.min';
 import 'bootstrap/dist/js/bootstrap.min';
 
 export const app = {

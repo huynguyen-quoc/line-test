@@ -6,7 +6,7 @@ import Main from '../Main';
 class App extends React.PureComponent {
   render() {
     return (
-      <div className="d-flex flex-column h-100">
+      <div id="main-app" className="d-flex flex-column h-100">
         <Header />
         <Main />
       </div>

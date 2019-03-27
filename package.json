@@ -20,7 +20,6 @@
     "analyze": "NODE_ENV=production webpack --config config/webpack.config.js --profile --json > webpack.stats.json",
     "lint": "eslint  --ext .js --ext .jsx src config test tools",
     "format": "prettier \"**/*.{js,jsx}\" --write",
-    "test": "is-ci \"test:coverage\" \"test:watch\"",
     "test:coverage": "jest --bail --coverage",
     "test:watch": "jest --watch",
     "serve": "serve --no-clipboard --single --listen 3000 build"
@@ -90,6 +89,7 @@
     "date-fns": "^1.30.1",
     "dotenv": "^7.0.0",
     "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
     "enzyme-to-json": "^3.3.5",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -107,11 +107,20 @@
     "fs-extra": "^7.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^4.0.0-beta.5",
+    "husky": "^1.3.1",
+    "is-ci": "^2.0.0",
     "jest": "^24.5.0",
     "jest-chain": "^1.1.2",
+    "jest-environment-jsdom": "^24.5.0",
+    "jest-environment-jsdom-global": "^1.2.0",
     "jest-enzyme": "^7.0.2",
     "jest-extended": "^0.11.1",
+    "jest-haste-map": "^24.5.0",
     "jest-localstorage-mock": "^2.4.0",
+    "jest-resolve": "^24.5.0",
+    "jest-resolve-dependencies": "^24.5.0",
+    "jest-serializer-html": "^6.0.0",
+    "jest-watch-typeahead": "^0.2.1",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "offline-plugin": "^5.0.6",
@@ -135,5 +144,11 @@
     "webpack-dev-server": "^3.1.14",
     "webpack-merge": "^4.2.1",
     "yargs": "^13.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "post-merge": "node tools update",
+      "pre-commit": "npm run precommit"
+    }
   }
 }
