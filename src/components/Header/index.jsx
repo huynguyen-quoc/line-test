@@ -3,10 +3,9 @@ import NavBar from '../NavBar';
 
 class Header extends React.PureComponent {
   render() {
-
     return (
       <header>
-         <NavBar />
+        <NavBar />
       </header>
     );
   }

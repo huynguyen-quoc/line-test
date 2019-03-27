@@ -17,7 +17,6 @@ require('../config/env');
 const chalk = require('chalk');
 const dateFns = require('date-fns');
 const webpack = require('webpack');
-const path = require('path');
 
 const WebpackDevServer = require('webpack-dev-server');
 const clearConsole = require('react-dev-utils/clearConsole');

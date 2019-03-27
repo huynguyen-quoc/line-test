@@ -113,7 +113,7 @@ module.exports = webpackEnv => {
       loader: 'sass',
       options: {
         sourceMap: isProd,
-        includePaths: [paths.nodeModules]
+        includePaths: [paths.nodeModules],
       },
     },
   ];

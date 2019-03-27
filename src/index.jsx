@@ -5,7 +5,7 @@ import { AppContainer } from 'react-hot-loader';
 import App from 'containers/App';
 import './style.scss';
 import 'jquery/src/jquery';
-import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/js/bootstrap.min';
 
 export const app = {
   cssRetries: 0,
@@ -22,7 +22,7 @@ export const app = {
     if (root) {
       ReactDOM.render(
         <AppContainer>
-            <Component />
+          <Component />
         </AppContainer>,
         root,
       );
