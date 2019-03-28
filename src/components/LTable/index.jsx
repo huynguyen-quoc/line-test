@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { convertStatus } from 'utils/helpers';
 
-function LTable({ items, pageIndex, pageSize }) {
+function LTable({ items, pageIndex, pageSize, showDetail }) {
   return (
     <table className="table table-hover table-responsive">
       <thead>
@@ -21,7 +21,7 @@ function LTable({ items, pageIndex, pageSize }) {
       </thead>
       <tbody>
         {items.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize).map((data, index) => (
-          <tr className="text-center" key={index}>
+          <tr className="text-center" key={index} onClick={() => showDetail(data)}>
             <td>{data.truck_plate}</td>
             <td>{data.cargo_type}</td>
             <td>{data.driver}</td>
@@ -43,6 +43,7 @@ LTable.propTypes = {
   items: PropTypes.array.isRequired,
   pageIndex: PropTypes.number.isRequired,
   pageSize: PropTypes.number.isRequired,
+  showDetail: PropTypes.func.isRequired,
 };
 
 export default LTable;

@@ -1,0 +1,10 @@
+.form-group {
+  &.required {
+    label {
+      &:after {
+        content:" *";
+        color:rgba(255, 0, 0, 0.623);
+      }
+    }
+  }
+}
