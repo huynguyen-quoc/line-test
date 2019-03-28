@@ -10,7 +10,6 @@ const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
-const OfflinePlugin = require('offline-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
@@ -133,8 +132,8 @@ module.exports = webpackEnv => {
       ].filter(Boolean),
     },
     output: {
-      chunkFilename: isProd ? 'scripts/js/[name].[git-hash].chunk.js' : '[name].chunk.js',
-      filename: isProd ? '[name].[git-hash].js' : '[name].js',
+      chunkFilename: isProd ? 'scripts/js/[name].[chunkhash].chunk.js' : '[name].chunk.js',
+      filename: isProd ? '[name].[chunkhash].js' : '[name].js',
       path: paths.appBuild,
       pathinfo: isDev,
       publicPath,
@@ -324,31 +323,8 @@ module.exports = webpackEnv => {
         new InlineChunkHtmlPlugin(HtmlPlugin, [/runtime~.+[.]js/]),
       isProd &&
         new MiniCssExtractPlugin({
-          filename: 'css/bundle.[git-hash].css',
-          chunkFilename: 'css/bundle.[git-hash].chunk.css',
-        }),
-      isProd &&
-        new OfflinePlugin({
-          autoUpdate: true,
-          safeToUseOptionalCaches: true,
-          ServiceWorker: {
-            events: true,
-          },
-          AppCache: {
-            events: true,
-          },
-          caches: {
-            main: ['**/*.js', 'index.html'],
-            optional: [':rest:'],
-          },
-          cacheMaps: [
-            {
-              match: function match() {
-                return new URL('/', location);
-              },
-              requestTypes: ['navigate'],
-            },
-          ],
+          filename: 'css/bundle.[chunkhash].css',
+          chunkFilename: 'css/bundle.[chunkhash].chunk.css',
         }),
       isDev &&
         new CircularDependencyPlugin({

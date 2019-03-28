@@ -140,6 +140,7 @@
     "rsync": "^0.6.1",
     "sass-loader": "^7.1.0",
     "script-loader": "^0.7.2",
+    "serve": "^10.1.2",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.28.3",
@@ -153,5 +154,11 @@
       "post-merge": "node tools update",
       "pre-commit": "npm run precommit"
     }
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
