@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1553697353305" clover="3.2.0">
-  <project timestamp="1553697353306" name="All files">
-    <metrics statements="43" coveredstatements="30" conditionals="16" coveredconditionals="5" methods="23" coveredmethods="16" elements="82" coveredelements="51" complexity="0" loc="43" ncloc="43" packages="12" files="14" classes="14"/>
+<coverage generated="1553845960005" clover="3.2.0">
+  <project timestamp="1553845960006" name="All files">
+    <metrics statements="175" coveredstatements="100" conditionals="131" coveredconditionals="70" methods="69" coveredmethods="29" elements="375" coveredelements="199" complexity="0" loc="175" ncloc="175" packages="17" files="17" classes="17"/>
     <package name="src">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="index.jsx" path="/Applications/MINE/LINE/line-test/src/index.jsx">
@@ -18,18 +18,87 @@
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
+    <package name="src.components.Alert">
+      <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="/Applications/MINE/LINE/line-test/src/components/Alert/index.jsx">
+        <metrics statements="6" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.CountingTextArea">
+      <metrics statements="6" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="index.jsx" path="/Applications/MINE/LINE/line-test/src/components/CountingTextArea/index.jsx">
+        <metrics statements="6" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+      </file>
+    </package>
     <package name="src.components.DataProvider">
       <metrics statements="8" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="index.jsx" path="/Applications/MINE/LINE/line-test/src/components/DataProvider/index.jsx">
         <metrics statements="8" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.DetailModal">
+      <metrics statements="6" coveredstatements="4" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="1"/>
+      <file name="index.jsx" path="/Applications/MINE/LINE/line-test/src/components/DetailModal/index.jsx">
+        <metrics statements="6" coveredstatements="4" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.DetailModal.components.DetailForm">
+      <metrics statements="14" coveredstatements="2" conditionals="36" coveredconditionals="0" methods="11" coveredmethods="0"/>
+      <file name="index.jsx" path="/Applications/MINE/LINE/line-test/src/components/DetailModal/components/DetailForm/index.jsx">
+        <metrics statements="14" coveredstatements="2" conditionals="36" coveredconditionals="0" methods="11" coveredmethods="0"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="118" count="0" type="stmt"/>
+        <line num="146" count="0" type="stmt"/>
+        <line num="169" count="0" type="stmt"/>
+        <line num="182" count="0" type="stmt"/>
+        <line num="190" count="2" type="stmt"/>
+        <line num="196" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.FormatInput">
+      <metrics statements="7" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <file name="index.jsx" path="/Applications/MINE/LINE/line-test/src/components/FormatInput/index.jsx">
+        <metrics statements="7" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Header">
@@ -40,12 +109,20 @@
       </file>
     </package>
     <package name="src.components.LTable">
-      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="11" coveredstatements="4" conditionals="10" coveredconditionals="5" methods="8" coveredmethods="1"/>
       <file name="index.jsx" path="/Applications/MINE/LINE/line-test/src/components/LTable/index.jsx">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="11" coveredstatements="4" conditionals="10" coveredconditionals="5" methods="8" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="24" count="10" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="93" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Main">
@@ -64,30 +141,27 @@
       </file>
     </package>
     <package name="src.components.Pagination">
-      <metrics statements="8" coveredstatements="5" conditionals="10" coveredconditionals="4" methods="5" coveredmethods="2"/>
+      <metrics statements="8" coveredstatements="4" conditionals="10" coveredconditionals="2" methods="5" coveredmethods="1"/>
       <file name="index.jsx" path="/Applications/MINE/LINE/line-test/src/components/Pagination/index.jsx">
-        <metrics statements="8" coveredstatements="5" conditionals="10" coveredconditionals="4" methods="5" coveredmethods="2"/>
+        <metrics statements="8" coveredstatements="4" conditionals="10" coveredconditionals="2" methods="5" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="21" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="25" count="0" type="stmt"/>
         <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="47" count="1" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="src.constants">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="AppConfig.js" path="/Applications/MINE/LINE/line-test/src/constants/AppConfig.js">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-      </file>
-      <file name="AppData.js" path="/Applications/MINE/LINE/line-test/src/constants/AppData.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      </file>
-      <file name="index.js" path="/Applications/MINE/LINE/line-test/src/constants/index.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+    <package name="src.components.ToolBar">
+      <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+      <file name="index.jsx" path="/Applications/MINE/LINE/line-test/src/components/ToolBar/index.jsx">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.containers.App">
@@ -98,29 +172,111 @@
       </file>
     </package>
     <package name="src.containers.Main">
-      <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
+      <metrics statements="52" coveredstatements="21" conditionals="8" coveredconditionals="2" methods="11" coveredmethods="3"/>
       <file name="index.jsx" path="/Applications/MINE/LINE/line-test/src/containers/Main/index.jsx">
-        <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
+        <metrics statements="52" coveredstatements="21" conditionals="8" coveredconditionals="2" methods="11" coveredmethods="3"/>
+        <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="74" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="93" count="0" type="stmt"/>
+        <line num="94" count="0" type="stmt"/>
+        <line num="95" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="106" count="0" type="stmt"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="113" count="0" type="stmt"/>
+        <line num="117" count="0" type="stmt"/>
+        <line num="118" count="0" type="stmt"/>
+        <line num="119" count="0" type="stmt"/>
+        <line num="124" count="0" type="stmt"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="129" count="0" type="stmt"/>
+        <line num="130" count="0" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="132" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="133" count="0" type="stmt"/>
+        <line num="134" count="0" type="stmt"/>
+        <line num="136" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="137" count="0" type="stmt"/>
+        <line num="139" count="0" type="stmt"/>
+        <line num="144" count="0" type="stmt"/>
+        <line num="148" count="2" type="stmt"/>
+        <line num="149" count="2" type="stmt"/>
+        <line num="150" count="2" type="stmt"/>
+        <line num="159" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="6" coveredstatements="3" conditionals="6" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <metrics statements="44" coveredstatements="44" conditionals="57" coveredconditionals="57" methods="15" coveredmethods="15"/>
       <file name="helpers.js" path="/Applications/MINE/LINE/line-test/src/utils/helpers.js">
-        <metrics statements="6" coveredstatements="3" conditionals="6" coveredconditionals="1" methods="3" coveredmethods="3"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="8" type="stmt"/>
-        <line num="12" count="10" type="cond" truecount="1" falsecount="1"/>
-        <line num="13" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="15" count="0" type="stmt"/>
+        <metrics statements="44" coveredstatements="44" conditionals="57" coveredconditionals="57" methods="15" coveredmethods="15"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="12" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="26" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="31" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="46" count="1" type="stmt"/>
+        <line num="51" count="12" type="stmt"/>
+        <line num="52" count="12" type="stmt"/>
+        <line num="56" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="57" count="5" type="stmt"/>
+        <line num="58" count="5" type="stmt"/>
+        <line num="62" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="63" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="64" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="69" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="70" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="76" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="77" count="6" type="stmt"/>
+        <line num="78" count="6" type="stmt"/>
+        <line num="79" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="80" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="82" count="6" type="stmt"/>
+        <line num="109" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="110" count="2" type="stmt"/>
+        <line num="115" count="1" type="stmt"/>
       </file>
     </package>
   </project>

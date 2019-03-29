@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main should match snapshot 1`] = `
+<Main>
+  <ContextProvider
+    value={
+      Object {
+        "alert": Object {
+          "isShowAlert": false,
+          "message": "",
+          "type": "info",
+        },
+        "detail": Object {
+          "cargo_type": Array [],
+          "description": "",
+          "dimension": "",
+          "driver": Array [],
+          "parking_address": "",
+          "price": "",
+          "production_in_year": "",
+          "status": "",
+          "truck_plate": "",
+          "truck_type": "",
+        },
+        "errors": Object {},
+        "isShow": false,
+        "items": Array [],
+        "modalTitle": "Create new truck",
+        "pageIndex": 0,
+        "pageSize": 10,
+        "pages": Array [],
+        "sortField": "",
+      }
+    }
+  >
+    <ContextConsumer>
+      <Component />
+    </ContextConsumer>
+  </ContextProvider>
+</Main>
+`;

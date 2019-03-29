@@ -1,11 +1,13 @@
 # LINE TEST
 
 
-## Installation & Running
+## Installation & Running & Testing
 
 ```
 Run yarn or npm install to install dependencies.
 Run npm start or yarn start to see the example app at http://localhost:3000.
+Run yarn test:watch to test watch.
+Run yarn test:coverage to test with coverage.
 ```
 
 ## Build Product

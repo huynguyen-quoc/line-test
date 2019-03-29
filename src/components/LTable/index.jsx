@@ -60,7 +60,7 @@ function LTable({ items, pageIndex, pageSize, showDetail, deleteDetail }) {
               <td>{data.cargo_type.map(e => e.value).join(',')}</td>
               <td>{data.driver.map(e => e.value).join('')}</td>
               <td>{data.truck_type}</td>
-              <td>{formatString(data.price,'price')}</td>
+              <td>{formatString(data.price, 'price')}</td>
               <td>{data.dimension}</td>
               <td>{data.parking_address}</td>
               <td>{data.production_in_year}</td>

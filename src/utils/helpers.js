@@ -46,7 +46,6 @@ export function saveData(object: Object, key: string) {
   localStorage.setItem(key, JSON.stringify(object));
 }
 
-
 export function getData(key: string): any {
   const items = localStorage.getItem(key);
   return JSON.parse(items);
@@ -67,6 +66,7 @@ export function deleteData(index: number, key: string) {
 
 export function updateData(object: Object, key: string, index: number) {
   const items = getData(key) || [];
+  if (items.length - 1 < index) return;
   items[index] = object;
   localStorage.setItem(key, JSON.stringify(items));
 }

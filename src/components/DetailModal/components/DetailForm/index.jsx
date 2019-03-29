@@ -6,7 +6,6 @@ import CountingTextArea from '../../../CountingTextArea';
 import FormatInput from '../../../FormatInput';
 import { validateResults } from '../../../../utils/helpers';
 
-
 function FormDetail(props) {
   const { onChange, errors, values } = props;
   return (
