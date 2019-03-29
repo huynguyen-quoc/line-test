@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { generatePages } from 'utils/helpers';
-import { Data } from '../../constants';
 
 const DEFAULT_STATE = {
-  items: Data,
-  pages: generatePages(Data.length / 10),
+  items: [],
+  pages: 0,
   pageIndex: 0,
   pageSize: 10,
 };

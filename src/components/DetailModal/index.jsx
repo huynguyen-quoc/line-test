@@ -4,7 +4,7 @@ import FormDetail from './components/DetailForm';
 import './style.scss';
 
 function DetailModal(props) {
-  const { isShow, onClose, title, onSubmit, onFieldsChange } = props;
+  const { isShow, onClose, title, onSubmit, onFieldsChange, errors, values } = props;
   return (
     <React.Fragment>
       <div className={`modal-back-drop  ${isShow ? 'modal-open' : ''}`}>
@@ -24,7 +24,9 @@ function DetailModal(props) {
               </div>
               <form onSubmit={onSubmit} noValidate autoComplete="off">
                 <div className="modal-body">
-                  <FormDetail onChange={onFieldsChange} />
+                  {isShow ? (
+                    <FormDetail values={values} errors={errors} onChange={onFieldsChange} />
+                  ) : null}
                 </div>
                 <div className="modal-footer">
                   <button type="submit" className="btn btn-primary">
@@ -44,11 +46,13 @@ function DetailModal(props) {
 }
 
 DetailModal.propTypes = {
+  errors: PropTypes.object.isRequired,
   isShow: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
   onFieldsChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
+  values: PropTypes.object.isRequired,
 };
 
 DetailModal.defaultProps = {
